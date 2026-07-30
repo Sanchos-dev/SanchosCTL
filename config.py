@@ -1,0 +1,1 @@
+avail_apps = ["vesktop","auygram","nekobox"]
