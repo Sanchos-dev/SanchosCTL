@@ -1,7 +1,5 @@
 # SanchosCTL base for SanchosOS
 # SanchosOS - arch based system
-#
-#
 
 
 import os
@@ -59,4 +57,23 @@ elif "-w" or "-tui" in sys.argv:
 
 
 
-#check flags: if "-h" or "-help" in sys.argv:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+# Made by Sanchos from sanchos.su
+###
