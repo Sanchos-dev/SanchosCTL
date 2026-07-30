@@ -21,3 +21,7 @@ SanchosCTL is a simple CLI tool for managing SanchosOS and the Sanchos ecosystem
 Run terminal user interface mode:
 ```sh
 sanchosctl --tui
+```
+
+
+Made by Sanchos from https://sanchos.su
