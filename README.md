@@ -17,9 +17,9 @@ SanchosCTL is a simple CLI tool for managing SanchosOS and the Sanchos ecosystem
 | `-w` | `--tui` | Run in terminal interface mode |
 
 ## Examples
-Run terminal user interface mode:
+Install cava packet:
 ```sh
-sanchosctl --tui
+sanchosctl -i cava
 ```
 
 
