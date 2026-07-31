@@ -1,12 +1,15 @@
 # SanchosCTL base for SanchosOS
 # SanchosOS - arch based system
-
+### TODO ###
+# installer: done
+#
+###
 
 import os
 import sys
 import time
 import config
-from utils import installer, backup, tui
+from utils import installer, backup, tui, updater
 inst = installer()
 bak = backup()
 
@@ -17,7 +20,7 @@ args = sys.argv[1:]
 help_page =f"""
 SanchosCTL usage: 
   -h or --help : this page
-  -i [pkg_name] or --install [pkg_name] : install some apps, available apps: {config.avail_apps} 
+  -i [pkg_name] or --install [pkg_name] : install app automaticly
   -u or --update : update system and sanchos ecosystem packages 
   -id or --id : SanchosID login/register/exit acc 
   -vpn or --sanchosvpn : update SanchosVPN subscription 
@@ -47,7 +50,7 @@ elif "-i" in args or "--install" in args:
         print("ERROR: idk")
 
 elif "-u" in args or "--update" in args:
-	pass
+	updater.update()
 
 elif "-id" in args or "--id" in args:
 	pass
