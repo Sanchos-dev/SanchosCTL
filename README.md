@@ -8,8 +8,8 @@ SanchosCTL is a simple CLI tool for managing SanchosOS and the Sanchos ecosystem
 | :--- | :--- | :--- |
 | `-h` | `--help` | Show help message |
 | `-i` | `--install` | Install applications |
-| `-u` | `--update` | Update system and Sanchos ecosystem |
-| `--id` | `--id` | SanchosID login, register, or exit account |
+| `-u` | `--update` | Update system and Sanchos ecosystem packages|
+| `-id` | `--id` | SanchosID login, register, or exit account |
 | `-vpn` | `--sanchosvpn` | Update SanchosVPN subscription |
 | `-c` | `--check` | Perform full system check |
 | `-t` | `--theme` | Change system theme |

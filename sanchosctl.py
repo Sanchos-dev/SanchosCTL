@@ -6,25 +6,20 @@ import os
 import sys
 import time
 import config
-from utils import installer as inst
-from utils import backup as bak
+from utils import installer, backup, tui
+inst = installer()
+bak = backup()
 
 
 
-def clr():
-	os.system("clear")
-
-clr()
-print("SanchosCTL cli for SanchosOS")
-
-
+args = sys.argv[1:]
 
 help_page =f"""
 SanchosCTL usage: 
   -h or --help : this page
   -i or --install : install some apps, available apps: {config.avail_apps} 
-  -u or --update : update system and sanchos ecosystem  
-  -i or --id : SanchosID login/register/exit acc 
+  -u or --update : update system and sanchos ecosystem packages 
+  -id or --id : SanchosID login/register/exit acc 
   -vpn or --sanchosvpn : update SanchosVPN subscription 
   -c or --check : full system check
   -t or --theme : change theme from
@@ -33,44 +28,34 @@ SanchosCTL usage:
 """
 
 
+def clr():
+	os.system("clear")
+print("SanchosCTL cli for SanchosOS\n")
 
-
-
-if "-h" or "--help" in sys.argv:
+if "-h" in args or "--help" in args:
 	print(help_page)
-elif "-i" or "--install" in sys.argv:
+elif "-i" in args or "--install" in args:
+    flag = "-i" if "-i" in args else "--install"
+    index = args.index(flag)
+    if index + 1 < len(args):
+        value = args[index + 1]
+        inst.install(value)
+    else:
+        print("ERROR: idk")
+elif "-u" in args or "--update" in args:
 	pass
-elif "-u" or "--update" in sys.argv:
+elif "-id" in args or "--id" in args:
 	pass
-elif "-vpn" or "--id" in sys.argv:
+elif "-vpn" in args or "--sanchosvpn" in args:
 	pass
-elif "-c" or "--sanchosvpn" in sys.argv:
+elif "-c" in args or "--check" in args:
 	pass
-elif "-t" or "--check" in sys.argv:
+elif "-t" in args or "--theme" in args:
 	pass
-elif "-b" or "--theme" in sys.argv:
+elif "-b" in args or "--backup" in args:
 	pass
-elif "-w" or "-tui" in sys.argv:
+elif "-w" in args or "--tui" in args:
 	pass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
