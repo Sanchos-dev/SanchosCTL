@@ -22,15 +22,13 @@ class installer():
             else:
             	print(f"\n\n\n SUCCESFULLY INSTALLED {package} WITH PACMAN")
 
-
-
-
-
-
-
-
 class backup():
-    pass
+	def full():
+		pass
+	def partial(directory):
+		pass
+	def restore(arc_dir):
+		pass
 
 class tui():
     pass

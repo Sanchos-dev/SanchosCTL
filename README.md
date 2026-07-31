@@ -14,7 +14,8 @@ SanchosCTL is a simple CLI tool for managing SanchosOS and the Sanchos ecosystem
 | `-c` | `--check` | Perform full system check |
 | `-t` | `--theme` | Change system theme |
 | `-fb` | `--fullbackup` | Create full system backup |
-| `-b` | `--backup` | Create partial backup |
+| `-b [dir]` | `--backup [dir]` | Create partial backup |
+| `-rb [achive]` | `--restorebackup [achive]` | Restore files from backup |
 | `-w` | `--tui` | Run in terminal interface mode |
 
 ## Examples

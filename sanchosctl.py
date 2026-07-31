@@ -23,7 +23,9 @@ SanchosCTL usage:
   -vpn or --sanchosvpn : update SanchosVPN subscription 
   -c or --check : full system check
   -t or --theme : change theme from
-  -b or --backup : make full system backup
+  -fb or --fullbackup : make full system backup
+  -b [dir] or --backup [dir] : make partial backup
+  -rb [achive] or --restorebackup [achive] : restore files from backup
   -w or -tui : run SanchosCtl in terminal interface mode
 """
 
@@ -59,17 +61,26 @@ elif "-c" in args or "--check" in args:
 elif "-t" in args or "--theme" in args:
 	pass
 
-elif "-i" in args or "--install" in args:
-    flag = "-i" if "-i" in args else "--install"
+elif "-b" in args or "--backup" in args:
+    flag = "-b" if "-b" in args else "--backup"
     index = args.index(flag)
     if index + 1 < len(args):
-        value = args[index + 1]
-        inst.install(value)
+        directory = args[index + 1]
+        bak.partial(directory)
     else:
         print("ERROR: idk")
+
 elif "-fb" in args or "--fullbackup" in args:
 	bak.full()
 
+elif "-rb" in args or "--restorebackup" in args:
+    flag = "-rb" if "-rb" in args else "--restorebackup"
+    index = args.index(flag)
+    if index + 1 < len(args):
+        achive = args[index + 1]
+        bak.restore(achive)
+    else:
+        print("ERROR: idk")
 elif "-w" in args or "--tui" in args:
 	pass
 
