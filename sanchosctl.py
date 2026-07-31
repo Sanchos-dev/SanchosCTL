@@ -17,7 +17,7 @@ args = sys.argv[1:]
 help_page =f"""
 SanchosCTL usage: 
   -h or --help : this page
-  -i or --install : install some apps, available apps: {config.avail_apps} 
+  -i [pkg_name] or --install [pkg_name] : install some apps, available apps: {config.avail_apps} 
   -u or --update : update system and sanchos ecosystem packages 
   -id or --id : SanchosID login/register/exit acc 
   -vpn or --sanchosvpn : update SanchosVPN subscription 
@@ -34,6 +34,7 @@ print("SanchosCTL cli for SanchosOS\n")
 
 if "-h" in args or "--help" in args:
 	print(help_page)
+
 elif "-i" in args or "--install" in args:
     flag = "-i" if "-i" in args else "--install"
     index = args.index(flag)
@@ -42,18 +43,33 @@ elif "-i" in args or "--install" in args:
         inst.install(value)
     else:
         print("ERROR: idk")
+
 elif "-u" in args or "--update" in args:
 	pass
+
 elif "-id" in args or "--id" in args:
 	pass
+
 elif "-vpn" in args or "--sanchosvpn" in args:
 	pass
+
 elif "-c" in args or "--check" in args:
 	pass
+
 elif "-t" in args or "--theme" in args:
 	pass
-elif "-b" in args or "--backup" in args:
-	pass
+
+elif "-i" in args or "--install" in args:
+    flag = "-i" if "-i" in args else "--install"
+    index = args.index(flag)
+    if index + 1 < len(args):
+        value = args[index + 1]
+        inst.install(value)
+    else:
+        print("ERROR: idk")
+elif "-fb" in args or "--fullbackup" in args:
+	bak.full()
+
 elif "-w" in args or "--tui" in args:
 	pass
 

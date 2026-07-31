@@ -7,13 +7,14 @@ SanchosCTL is a simple CLI tool for managing SanchosOS and the Sanchos ecosystem
 | Flag | Full Option | Description |
 | :--- | :--- | :--- |
 | `-h` | `--help` | Show help message |
-| `-i` | `--install` | Install applications |
+| `-i [pkg_name]` | `--install [pkg_name]` | Install applications |
 | `-u` | `--update` | Update system and Sanchos ecosystem packages|
 | `-id` | `--id` | SanchosID login, register, or exit account |
 | `-vpn` | `--sanchosvpn` | Update SanchosVPN subscription |
 | `-c` | `--check` | Perform full system check |
 | `-t` | `--theme` | Change system theme |
-| `-b` | `--backup` | Create full system backup |
+| `-fb` | `--fullbackup` | Create full system backup |
+| `-b` | `--backup` | Create partial backup |
 | `-w` | `--tui` | Run in terminal interface mode |
 
 ## Examples
