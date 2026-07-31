@@ -1,9 +1,7 @@
 # SanchosCTL
-
 SanchosCTL is a simple CLI tool for managing SanchosOS and the Sanchos ecosystem.
 
 ## Commands
-
 | Flag | Full Option | Description |
 | :--- | :--- | :--- |
 | `-h` | `--help` | Show help message |
@@ -19,7 +17,6 @@ SanchosCTL is a simple CLI tool for managing SanchosOS and the Sanchos ecosystem
 | `-w` | `--tui` | Run in terminal interface mode |
 
 ## Examples
-
 Run terminal user interface mode:
 ```sh
 sanchosctl --tui
