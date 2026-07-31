@@ -5,6 +5,7 @@ SanchosCTL is a simple CLI tool for managing SanchosOS and the Sanchos ecosystem
 | Flag | Full Option | Description |
 | :--- | :--- | :--- |
 | `-h` | `--help` | Show help message |
+| `-r [pkg_name]` | `--remove [pkg_name]` | Remove applications |
 | `-i [pkg_name]` | `--install [pkg_name]` | Install applications |
 | `-u` | `--update` | Update system and Sanchos ecosystem packages|
 | `-id` | `--id` | SanchosID login, register, or exit account |

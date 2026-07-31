@@ -21,6 +21,7 @@ help_page =f"""
 SanchosCTL usage: 
   -h or --help : this page
   -i [pkg_name] or --install [pkg_name] : install app automaticly
+  -r [pkg_name] or --remove [pkg_name] : remove app automaticly
   -u or --update : update system and sanchos ecosystem packages 
   -id or --id : SanchosID login/register/exit acc 
   -vpn or --sanchosvpn : update SanchosVPN subscription 
@@ -35,7 +36,7 @@ SanchosCTL usage:
 
 def clr():
 	os.system("clear")
-print("SanchosCTL cli for SanchosOS\n")
+clr()
 
 if "-h" in args or "--help" in args:
 	print(help_page)
@@ -44,11 +45,20 @@ elif "-i" in args or "--install" in args:
     flag = "-i" if "-i" in args else "--install"
     index = args.index(flag)
     if index + 1 < len(args):
-        value = args[index + 1]
-        inst.install(value)
+        app = args[index + 1]
+        inst.install(app)
     else:
         print("ERROR: idk")
 
+elif "-r" in args or "--remove" in args:
+    flag = "-r" if "-r" in args else "--remove"
+    index = args.index(flag)
+    if index + 1 < len(args):
+        app = args[index + 1]
+        inst.remove(app)
+    else:
+        print("ERROR: idk")
+        
 elif "-u" in args or "--update" in args:
 	updater.update()
 
