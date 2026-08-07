@@ -34,6 +34,7 @@ SanchosCTL usage:
   -b [dir] or --backup [dir] : make partial backup
   -rb [achive] or --restorebackup [achive] : restore files from backup
   -w or -tui : run SanchosCtl in terminal interface mode
+  -ui or --ui : run SanchosCtl in ui mode
 """
 
 
@@ -100,6 +101,8 @@ elif "-rb" in args or "--restorebackup" in args:
 elif "-w" in args or "--tui" in args:
 	pass
 
+elif "-ui" in args or "--ui" in args:
+    pass
 
 
 ###

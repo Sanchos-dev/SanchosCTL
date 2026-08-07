@@ -16,6 +16,7 @@ SanchosCTL is a simple CLI tool for managing SanchosOS and the Sanchos ecosystem
 | `-b [dir]` | `--backup [dir]` | Create partial backup |
 | `-rb [achive]` | `--restorebackup [achive]` | Restore files from backup |
 | `-w` | `--tui` | Run in terminal interface mode |
+| `-ui` | `--ui` | Run in user interface mode |
 
 ## Examples
 Install cava packet:
