@@ -2,7 +2,10 @@
 # SanchosOS - arch based system
 ### TODO ###
 # installer: done
-#
+# SanchosEcosystem integration : in process
+# SanchosOS-base integragion : in process
+# 
+# 
 ###
 
 import os
