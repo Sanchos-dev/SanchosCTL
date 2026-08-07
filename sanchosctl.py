@@ -12,7 +12,7 @@ import os
 import sys
 import time
 import config
-from utils import installer, backup, tui, updater
+from utils import installer, backup, tui, ui, updater
 inst = installer()
 bak = backup()
 
