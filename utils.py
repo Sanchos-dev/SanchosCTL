@@ -99,6 +99,11 @@ class backup():
 
 
 class tui():
+    def start(self):
+        pass
+    def draw(self, contents):
+        for i in range()
+
     pass
 
 class ui():

@@ -4,7 +4,7 @@
 # installer: done
 # SanchosEcosystem integration : in process
 # SanchosOS-base integragion : in process
-# 
+# tui : in process
 # 
 ###
 
@@ -34,7 +34,7 @@ SanchosCTL usage:
   -b [dir] or --backup [dir] : make partial backup
   -rb [achive] or --restorebackup [achive] : restore files from backup
   -w or -tui : run SanchosCtl in terminal interface mode
-  -ui or --ui : run SanchosCtl in ui mode
+  -ui or --gui : run SanchosCtl in ui mode
 """
 
 
@@ -99,10 +99,22 @@ elif "-rb" in args or "--restorebackup" in args:
     else:
         print("ERROR: idk")
 elif "-w" in args or "--tui" in args:
-	pass
+    flag = "-w" if "-w" in args else "--tui"
+    index = args.index(flag)
+    if index + 1 < len(args):
+        app = args[index + 1]
+        tui.start()
+    else:
+        print("ERROR: idk")
 
-elif "-ui" in args or "--ui" in args:
-    pass
+elif "-ui" in args or "--gui" in args:
+    flag = "-ui" if "-ui" in args else "--gui"
+    index = args.index(flag)
+    if index + 1 < len(args):
+        app = args[index + 1]
+        pass #here run the ui init shit
+    else:
+        print("ERROR: idk")    
 
 
 ###
