@@ -13,7 +13,8 @@ import sys
 import time
 import config
 from utils import installer, backup, updater
-from ui import gui, tui
+from ui import tui, gui
+uit = tui()
 inst = installer()
 bak = backup()
 
@@ -100,13 +101,9 @@ elif "-rb" in args or "--restorebackup" in args:
     else:
         print("ERROR: idk")
 elif "-w" in args or "--tui" in args:
-    flag = "-w" if "-w" in args else "--tui"
-    index = args.index(flag)
-    if index + 1 < len(args):
-        app = args[index + 1]
-        gui.start()
-    else:
-        print("ERROR: idk")
+    uit.start()
+
+
 
 elif "-ui" in args or "--gui" in args:
     flag = "-ui" if "-ui" in args else "--gui"
