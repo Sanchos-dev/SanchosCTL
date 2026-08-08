@@ -5,14 +5,15 @@
 # SanchosEcosystem integration : in process
 # SanchosOS-base integragion : in process
 # tui : in process
-# 
+# gui : in process
 ###
 
 import os
 import sys
 import time
 import config
-from utils import installer, backup, tui, ui, updater
+from utils import installer, backup, updater
+from ui import gui, tui
 inst = installer()
 bak = backup()
 
@@ -103,7 +104,7 @@ elif "-w" in args or "--tui" in args:
     index = args.index(flag)
     if index + 1 < len(args):
         app = args[index + 1]
-        tui.start()
+        gui.start()
     else:
         print("ERROR: idk")
 
