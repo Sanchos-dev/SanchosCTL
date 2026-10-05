@@ -1,4 +1,5 @@
 # SanchosCTL
+#I stopped working on SanchosCTL until SanchosOS will be in running condition 
 SanchosCTL is a simple CLI tool for managing SanchosOS and the Sanchos ecosystem.
 
 ## Commands
